@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding-top: 80px;
+    margin-top: -60px;
+}
+
+section h2 {
+    border-bottom: 3px solid #1a1a2e;
+    padding-bottom: 10px;
+    color: #1a1a2e;
+}
+
+article {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+article h3 {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    color: #e94560;
+}
+
+article img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.video-container {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 200px;
+    max-width: 560px;
+    border-radius: 6px;
+    border: none;
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    article {
+        grid-template-columns: 1fr;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
